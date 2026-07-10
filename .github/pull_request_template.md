@@ -1,129 +1,64 @@
-## Summary
-
-Describe this PR in 2-5 bullets:
-
-- Problem:
-- Why it matters:
-- What changed:
-- What did **not** change (scope boundary):
-
-## UX Journey
-
-### Before
-
-```
-(Draw the user-facing flow BEFORE this PR. Show each step the user takes.)
-
-Example:
-  User                   Archon                   AI Client
-  ────                   ──────                   ─────────
-  sends message ──────▶  resolves session
-                         loads context
-                         streams to AI ──────────▶ processes prompt
-                         receives chunks ◀──────── streams response
-  sees reply ◀─────────  sends to platform
-```
-
-### After
-
-```
-(Draw the user-facing flow AFTER this PR. Highlight what changed with [brackets] or asterisks.)
-```
-
-## Architecture Diagram
-
-### Before
-
-```
-(Map ALL modules touched or connected to this change. Draw lines between them.)
-```
-
-### After
-
-```
-(Same diagram with changes highlighted. Mark new modules with [+], removed with [-],
- modified with [~]. Mark new connections with ===, removed with --x--.)
-```
-
-**Connection inventory** (list every module-to-module edge, mark changes):
-
-| From | To | Status | Notes |
-|------|----|--------|-------|
-| | | unchanged / **new** / **removed** / **modified** | |
-
-## Label Snapshot
-
-- Risk: `risk: low|medium|high`
-- Size: `size: XS|S|M|L|XL`
-- Scope: `core|workflows|isolation|git|adapters|server|web|cli|paths|config|docs|dependencies|ci|tests|skills`
-- Module: `<scope>:<component>` (e.g. `workflows:executor`, `adapters:slack`, `core:orchestrator`)
-
-## Change Metadata
-
-- Change type: `bug|feature|refactor|docs|security|chore`
-- Primary scope: `core|workflows|isolation|git|adapters|server|web|cli|paths|multi`
-
 ## Linked Issue
 
-- Closes #
-- Related #
-- Depends on # (if stacked)
-- Supersedes # (if replacing older PR)
+<!-- Reference the GitHub Issue this PR addresses -->
+<!-- Must use one of: Refs #..., Related to #..., Issue #..., Closes #..., Fixes #..., Resolves #... -->
 
-## Validation Evidence (required)
+## What Changed
 
-Commands and result summary:
+<!-- Brief description of the changes -->
 
-```bash
-bun run type-check
-bun run lint
-bun run format:check
-bun run test
-# Or all at once:
-bun run validate
-```
+## Why
 
-- Evidence provided (test/log/trace/screenshot):
-- If any command is intentionally skipped, explain why:
+<!-- Motivation for the change -->
 
-## Security Impact (required)
+## User Impact
 
-- New permissions/capabilities? (`Yes/No`)
-- New external network calls? (`Yes/No`)
-- Secrets/tokens handling changed? (`Yes/No`)
-- File system access scope changed? (`Yes/No`)
-- If any `Yes`, describe risk and mitigation:
+<!-- How does this affect end users? -->
 
-## Compatibility / Migration
+- [ ] No user-facing change
+- [ ] Changes user workflow — describe:
 
-- Backward compatible? (`Yes/No`)
-- Config/env changes? (`Yes/No`)
-- Database migration needed? (`Yes/No`)
-- If yes, exact upgrade steps:
+## System Impact
 
-## Human Verification (required)
+<!-- Does this change system structure, APIs, or agent workflows? -->
 
-What was personally validated beyond CI:
+- [ ] No system impact
+- [ ] Database migration
+- [ ] Schema/types changed
+- [ ] Routes/pages changed
+- [ ] Agent configuration changed
+- [ ] Other:
 
-- Verified scenarios:
-- Edge cases checked:
-- What was not verified:
+## Data Model Impact
 
-## Side Effects / Blast Radius (required)
+<!-- Does this require new tables, columns, or migrations? -->
 
-- Affected subsystems/workflows:
-- Potential unintended effects:
-- Guardrails/monitoring for early detection:
+- [ ] No data model changes
+- [ ] Existing tables reused
+- [ ] New tables/columns added — justify:
 
-## Rollback Plan (required)
+## Documentation Impact
 
-- Fast rollback command/path:
-- Feature flags or config toggles (if any):
-- Observable failure symptoms:
+- [ ] No docs changes needed
+- [ ] docs/00_CURRENT_STATE.md updated
+- [ ] docs/05_DECISION_LOG.md updated
+- [ ] Other docs updated:
 
-## Risks and Mitigations
+## Verification
 
-List real risks in this PR (or write `None`).
+<!-- How was this tested? -->
 
-- Risk:
-  - Mitigation:
+- [ ] Typecheck passes
+- [ ] Build passes
+- [ ] Tests pass
+- [ ] Manually verified
+
+## Risks for Jim to Review
+
+<!-- Jim mainly reviews: business logic assumptions, user workflow impact, data model naming/reuse, whether current state docs remain true, whether the change conflicts with existing architecture direction -->
+
+*What should Jim pay attention to?*
+
+## Suggested Review Focus
+
+*Which areas need the most scrutiny?*
