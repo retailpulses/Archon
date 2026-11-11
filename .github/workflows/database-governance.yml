@@ -1,5 +1,5 @@
-# Database Governance Checks — calls the central reusable workflow from rp-governance-kit
-# See: https://github.com/retailpulses/rp-governance-kit/blob/main/docs/DATABASE_GOVERNANCE.md
+# Database Governance Checks — calls the central reusable workflow from retailpulses/.github
+# See: https://github.com/retailpulses/.github/blob/main/docs/DATABASE_GOVERNANCE.md
 name: Database Governance Checks
 
 on:
@@ -9,4 +9,6 @@ on:
 
 jobs:
   database-governance:
-    uses: retailpulses/rp-governance-kit/.github/workflows/database-governance-checks.yml@12056e83066536fff6804209f049f6de4b107081
+    uses: retailpulses/.github/.github/workflows/database-governance-checks.yml@4806c84b9d2acf76f7ac295fdb2fcc84ca1aeda1
+    with:
+      governance_ref: 4806c84b9d2acf76f7ac295fdb2fcc84ca1aeda1
